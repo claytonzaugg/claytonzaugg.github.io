@@ -45,6 +45,18 @@ section.background {
     top: 0;
 }
 
+.explore-more-details {
+    top: 50vh;
+    position: absolute;
+    left: -1000px;
+    transition: all 250ms ease-in-out;
+}
+
+.explore-more-details.active {
+    left: 0px;
+    transition: all 250ms ease-in-out;
+}
+
 .more-details {
     padding-left: 33px;
 }
@@ -62,22 +74,25 @@ section.background {
     margin-right: 20px;
 }
 
-.more-details article {
+article {
     background: #fff;
     max-width: 580px;
     height: 700px;
     padding: 70px;
     position: relative;
     transition: all 250ms ease-in-out;
-    display: none;
+    opacity: 0;
 }
 
-.more-details article.active {
-    display: block;
+article.active {
+    display: inline-block;
     transition: all 250ms ease-in-out;
+    vertical-align: middle;
+    margin-top: 200px;
+    opacity: 1;
 }
 
-.more-details article i {
+article i {
     position: absolute;
     right: 25px;
     top: 25px;
@@ -115,6 +130,11 @@ section.background {
     position: absolute;
     bottom: 10px;
     right: 0;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .social-media span {
